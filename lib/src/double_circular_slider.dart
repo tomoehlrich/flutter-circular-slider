@@ -20,6 +20,9 @@ class DoubleCircularSlider extends StatefulWidget {
   /// the end value in the selection
   final int end;
 
+  /// the initial number of laps
+  final int? laps;
+
   /// the number of primary sectors to be painted
   /// will be painted using selectionColor
   final int? primarySectors;
@@ -71,6 +74,7 @@ class DoubleCircularSlider extends StatefulWidget {
     this.divisions,
     this.init,
     this.end, {
+    this.laps,
     this.height,
     this.width,
     required this.child,
@@ -116,6 +120,7 @@ class _DoubleCircularSliderState extends State<DoubleCircularSlider> {
           mode: CircularSliderMode.doubleHandler,
           init: _init,
           end: _end,
+          laps: widget.laps ?? 0,
           divisions: widget.divisions,
           primarySectors: widget.primarySectors ?? 0,
           secondarySectors: widget.secondarySectors ?? 0,

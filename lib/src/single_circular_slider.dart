@@ -17,6 +17,9 @@ class SingleCircularSlider extends StatefulWidget {
   /// the initial value in the selection
   final int position;
 
+  /// the initial number of laps
+  final int? laps;
+
   /// the number of primary sectors to be painted
   /// will be painted using selectionColor
   final int? primarySectors;
@@ -70,6 +73,7 @@ class SingleCircularSlider extends StatefulWidget {
   SingleCircularSlider(
     this.divisions,
     this.position, {
+    this.laps,
     this.height,
     this.width,
     required this.child,
@@ -112,6 +116,7 @@ class _SingleCircularSliderState extends State<SingleCircularSlider> {
           mode: CircularSliderMode.singleHandler,
           init: 0,
           end: _end,
+          laps: widget.laps ?? 0,
           divisions: widget.divisions,
           primarySectors: widget.primarySectors ?? 0,
           secondarySectors: widget.secondarySectors ?? 0,

@@ -16,6 +16,7 @@ class CircularSliderPaint extends StatefulWidget {
   late final int init;
   late final int end;
   late final int divisions;
+  late final int laps;
   late final int primarySectors;
   late final int secondarySectors;
   late final SelectionChanged<int> onSelectionChange;
@@ -33,6 +34,7 @@ class CircularSliderPaint extends StatefulWidget {
   CircularSliderPaint({
     required this.mode,
     required this.divisions,
+    required this.laps,
     required this.init,
     required this.end,
     required this.child,
@@ -93,6 +95,8 @@ class _CircularSliderState extends State<CircularSliderPaint> {
   @override
   void initState() {
     super.initState();
+
+    _laps = widget.laps;
     _calculatePaintData();
   }
 
@@ -113,10 +117,10 @@ class _CircularSliderState extends State<CircularSliderPaint> {
         CustomPanGestureRecognizer:
             GestureRecognizerFactoryWithHandlers<CustomPanGestureRecognizer>(
           () => CustomPanGestureRecognizer(
-                onPanDown: _onPanDown,
-                onPanUpdate: _onPanUpdate,
-                onPanEnd: _onPanEnd,
-              ),
+            onPanDown: _onPanDown,
+            onPanUpdate: _onPanUpdate,
+            onPanEnd: _onPanEnd,
+          ),
           (CustomPanGestureRecognizer instance) {},
         ),
       },

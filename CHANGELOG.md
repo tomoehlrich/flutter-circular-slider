@@ -1,3 +1,7 @@
+## [2.6.0] - 2022-12-05
+
+- Add initial number of laps parameter and replaced FlatButton with TextButton in example
+
 ## [2.5.0] - 2019-06-12
 
 - Add onSelectionEnd callback function to CircularSlider

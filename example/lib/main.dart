@@ -152,12 +152,16 @@ class _SleepPageState extends State<SleepPage> {
           _formatBedTime('IN THE', inBedTime),
           _formatBedTime('OUT OF', outBedTime),
         ]),
-        FlatButton(
+        TextButton(
           child: Text('S H U F F L E'),
-          color: baseColor,
-          textColor: Colors.white,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(50.0),
+          style: ButtonStyle(
+            backgroundColor: MaterialStateProperty.all<Color>(baseColor),
+            foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
+            shape: MaterialStateProperty.all<OutlinedBorder>(
+              RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(50.0),
+              ),
+            ),
           ),
           onPressed: _shuffle,
         ),
