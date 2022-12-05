@@ -85,6 +85,7 @@ There are two different options:
 | init                      |                                                     | (Only for DoubleCircularSlider) The initial value in the selection. Has to be bigger than 0 and smaller than divisions. |
 | end                       |                                                     | (Only for DoubleCircularSlider) The end value in the selection. Has to be bigger than 0 and smaller than divisions.     |
 | position                  |                                                     | (Only for SingleCircularSlider) The selection. Has to be bigger than 0 and smaller than divisions.                      |
+| laps                      |                        0                            | Initial number of laps                                                                      |
 | height                    |                        220.0                        | Height of the canvas where the slider is rendered.                                                                      |
 | width                     |                        220.0                        | Width of the canvas where the slider is rendered.                                                                       |
 | primarySectors            |                          0                          | Number of sectors painted in the base circle. Painted in selectionColor.                                                |
